@@ -1,13 +1,5 @@
 #!/bin/sh
 echo Downloading and installing the latest version of the script...
 ./phpunit --version || (wget -O phpunit https://phar.phpunit.de/phpunit-9.phar && chmod +x phpunit && ./phpunit --version)
-echo "To run tests\n\n./phpunit tests"
-#wget -O - https://raw.githubusercontent.com/<username>/<project>/<branch>/<path>/<file>
-#chmod +x <file>
-
-
-#bash <(curl -Ls https://github.com/krypted/resetsoftwareupdate/raw/master/resetsoftwareupdate.sh)
-#https://krypted.com/mac-security/run-a-script-directly-from-github/
-
-
-# bash <(curl -Ls https://github.com/krypted/resetsoftwareupdate/raw/master/resetsoftwareupdate.sh)
+echo To run tests
+echo "./phpunit tests"
