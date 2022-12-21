@@ -1,0 +1,4 @@
+#!/bin/sh
+./phpunit --version || (wget -O phpunit https://phar.phpunit.de/phpunit-9.phar && chmod +x phpunit && ./phpunit --version)
+#test -f .test/autoload.php || ( mkdir -p ./.test && echo "<?php\nspl_autoload_register(function (\$class_name){if(\$class_name)require_once \$class_name . '.php';});" > .test/autoload.php )
+./phpunit tests
