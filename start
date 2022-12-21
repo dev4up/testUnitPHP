@@ -1,5 +1,5 @@
 #!/bin/sh
-echo Downloading and installing the latest version of the script...
-./phpunit --version || (wget -O phpunit https://phar.phpunit.de/phpunit-9.phar && chmod +x phpunit && ./phpunit --version)
-echo To run tests
+./phpunit --version || (wget -O phpunit https://phar.phpunit.de/phpunit-9.5.27.phar && chmod +x phpunit && ./phpunit --version)
+echo Add tests in the tests folder ./tests
+echo To run all tests:
 echo "./phpunit tests"
