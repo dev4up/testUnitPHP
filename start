@@ -1,5 +1,8 @@
 #!/bin/sh
+echo Chekcking and Installing phpunit
 ./phpunit --version || (wget -O phpunit https://phar.phpunit.de/phpunit-9.5.27.phar && chmod +x phpunit && ./phpunit --version)
+echo Adding phpunit to .gitignore
+grep -qxF -- "*phpunit*" ".gitignore" || echo "*phpunit*" >> ".gitignore"
 echo Add tests in the tests folder ./tests
 echo To run all tests:
 echo "./phpunit tests"
