@@ -1,6 +1,10 @@
 #!/bin/sh
 echo Chekcking and Installing phpunit
+# test if phpunit is installed
+phpunit --version && echo "phpunit is installed\n\nTo run all test:\nphpunit tests" && exit 0
+# if not install it locally
 ./phpunit --version || (wget -O phpunit https://phar.phpunit.de/phpunit-9.5.27.phar && chmod +x phpunit && ./phpunit --version)
+
 echo
 echo Adding phpunit to .gitignore
 grep -qxF -- "*phpunit*" ".gitignore" || echo "*phpunit*" >> ".gitignore"
